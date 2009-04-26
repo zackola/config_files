@@ -8,7 +8,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=vim
+export EDITOR=mate
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -16,7 +16,7 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # vi mode
-bindkey -v
+bindkey -e
 
 # use incremental search
 bindkey ^R history-incremental-search-backward
