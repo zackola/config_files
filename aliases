@@ -9,3 +9,14 @@ alias tu="ruby_test unit"
 alias tf="ruby_test functional"
 alias ti="ruby_test integration"
 alias hgdi="hg diff --color=always --git | less -r"
+
+alias ls="ls -alGF"
+alias count="ls -l1 | wc -l"
+alias ..='cd ..'
+alias ...='cd .. ; cd ..'
+alias grep='egrep -ri'  #case insensitive grep
+alias f='find . -iname'
+alias ducks='du -cks * | sort -rn|head -11' # Lists the size of all the folders and files
+alias top='top -o cpu'
+alias systail='tail -f /var/log/system.log'
+alias clojure='java -cp jline-0.9.94.jar:clojure.jar jline.ConsoleRunner clojure.lang.Repl'
