@@ -1,8 +1,9 @@
 # completion
 autoload -U compinit
 compinit -C
-# ignore case, the devil's work according to @psi
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# case-insensitive and partial-word then substring
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]=** r:|=*' '+l:|=*'
 
 # automatically enter directories without cd
 setopt auto_cd
@@ -32,3 +33,6 @@ setopt histignoredups
 
 # keep more history
 export HISTSIZE=200
+
+# remove / from wordchars. god
+WORDCHARS="${WORDCHARS:s#/#}"
