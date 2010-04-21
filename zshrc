@@ -28,11 +28,20 @@ setopt prompt_subst
 # prompt
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
+setopt append_history 
+setopt SHARE_HISTORY
+setopt correct
+
 # ignore duplicate history entries
 setopt histignoredups
 
 # keep more history
+
 export HISTSIZE=200
 
 # remove / from wordchars. god
 WORDCHARS="${WORDCHARS:s#/#}"
+
+HISTFILE=$HOME/.zhistory
+HISTSIZE=5000
+SAVEHIST=10000 # useful for setopt append_history
