@@ -35,10 +35,6 @@ setopt correct
 # ignore duplicate history entries
 setopt histignoredups
 
-# keep more history
-
-export HISTSIZE=200
-
 # remove / from wordchars. god
 WORDCHARS="${WORDCHARS:s#/#}"
 
