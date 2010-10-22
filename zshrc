@@ -9,7 +9,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=mate
+export EDITOR=vim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -28,7 +28,7 @@ setopt prompt_subst
 # prompt
 export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
-setopt append_history 
+setopt append_history
 setopt SHARE_HISTORY
 setopt correct
 
@@ -41,3 +41,6 @@ WORDCHARS="${WORDCHARS:s#/#}"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=5000
 SAVEHIST=10000 # useful for setopt append_history
+
+# add homebrew bin to PATH
+export PATH=$PATH:/usr/local/homebrew/bin
