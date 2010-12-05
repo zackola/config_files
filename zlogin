@@ -45,3 +45,5 @@ _git_remote_branch() {
   fi
 }
 compdef _git_remote_branch grb
+
+export PATH=$PATH:/Users/zack/.gem/ruby/1.8/bin:/usr/local/share/npm/bin

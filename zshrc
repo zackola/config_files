@@ -9,7 +9,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} m:[-._]=[-._] r:|[-./_]
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=mate
+export EDITOR=vim
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
