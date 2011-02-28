@@ -21,3 +21,14 @@ class Object
     (methods - Object.instance_methods).sort
   end
 end
+
+
+class String
+  def hashify_with_indcies(index_offset = 0)
+    puts "{"
+    self.split("\n").each_with_index { |field, index|
+      puts ":#{field} => #{index + index_offset},"
+    }
+    puts "}"
+  end
+end

@@ -43,4 +43,6 @@ HISTSIZE=5000
 SAVEHIST=10000 # useful for setopt append_history
 
 # add homebrew bin to PATH
-export PATH=$PATH:/usr/local/homebrew/bin
+export PATH=/usr/local/homebrew/bin:/usr/local/homebrew/sbin:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
