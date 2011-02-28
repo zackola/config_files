@@ -17,10 +17,10 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # emacs mode
-bindkey -e
+bindkey -v
 
 # use incremental search
-bindkey ^R history-incremental-search-backward
+bindkey '^R' history-incremental-search-backward
 
 # expand functions in the prompt
 setopt prompt_subst
@@ -35,8 +35,7 @@ setopt correct
 # ignore duplicate history entries
 setopt histignoredups
 
-# remove / from wordchars. god
-WORDCHARS="${WORDCHARS:s#/#}"
+WORDCHARS=''
 
 HISTFILE=$HOME/.zhistory
 HISTSIZE=5000
